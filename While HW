@@ -1,0 +1,12 @@
+# Name Gage Stengl
+# Period Period 6
+# Assignment While HW
+# Time Spent: 25 minutes 
+
+num = int(input("Put in a number: ")) # Gets the number from person
+binary = "" # makes binary not start with a number
+while num > 0: # does the loop until the number becomes 0
+    binary = str(num % 2) + binary # gets 0 or 1 and then adds it to the front
+    num = num // 2 #divides the number by 2 
+
+print("Binary:", binary) # Gets the end result 
