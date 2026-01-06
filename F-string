@@ -1,0 +1,12 @@
+# Name Gage Stengl
+# Period Period 6
+# Assignment F-string
+# Time Spent: 25 minutes
+print("Receipt Maker")
+total = 0
+for i in range(5):
+    name = input("Enter item name: ")
+    price = float(input("Enter item price: "))
+    total = total + price
+    print(f"{name}: ${price}")
+print("Total:", f"${total}")
