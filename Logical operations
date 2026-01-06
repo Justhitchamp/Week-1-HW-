@@ -1,0 +1,36 @@
+# Name: Gage 
+#Period 6
+#Assignment Logical practice
+# Time spent: 20 minutes
+
+
+# using not "This word switches the truth statement so if it says not raining it means we dont need a umbrella but if we use "else" it makes it where we would need a umbrella switching the truth value". 
+raining = True
+if not raining:
+  print("don't bring a umbrella")
+else:
+  print("bring a umbrella")
+# using or "means only one of the stamenets need to be true in order for the statement to work". 
+cloudy = True
+cold = False
+if cloudy or cold:
+  print("It a bad day outside")
+else:
+  print("Go outside and play football")
+# using And "means that both of the statements need to be true in order for it to work" 
+Videogames = True 
+Free = True
+
+if Videogames and Free:
+    print("I can play video games right now")
+else:
+    print("I can not play video games right now")
+# Using all 3 statements" To make the statement using if not for tired,and for bored,or for sleepy. 
+tired = False
+Sleepy = True
+bored = True 
+
+if not tired and bored or Sleepy:
+    print("Go play some games like rainbow six siege")
+else:
+    print("Lay down and take a nap")
