@@ -1,0 +1,20 @@
+# Name Gage Stengl
+# Period 6
+# Assignment Math operations HW
+# Time Spent: 15 minutes
+
+def math(a, b): # this function does the 4 math operations
+    add = a + b# adds the two numbers
+    sub = a - b# subtracts the 2 numbers
+    mul = a * b# multplies the 2 numbers 
+    div = a / b# divides the 2 numbers but of course cant divide 0         
+    return add, sub, mul, div   # returns the 4 numbers from the 4 differnt operations
+# asks the user for the two numbers
+num1 = float(input("Put in ur first number: "))
+num2 = float(input("Put in ur second number: "))
+addAns, subAns, mulAns, divAns = math(num1, num2) # calls the function to give the results
+# prints the answers out for the 4 operations
+print("Addition:", addAns)
+print("Subtraction:", subAns)
+print("Multiplication:", mulAns)
+print("Division:", divAns)
