@@ -1,0 +1,18 @@
+# Name Gage Stengl
+# Period Period 6
+# Assignment If statements
+# Time Spent: 10 minutes 
+age = int(input("Enter your age: "))
+if age >= 18:
+    print("You're an adult!")
+else:
+    print("You're still a minor!")
+# --- String Comparison ---
+favorite_color = input("\nWhat's your favorite color? ").lower()
+
+if favorite_color == "red":
+    print("Nice! Red is a Strong and powerful color.")
+elif favorite_color == "blue":
+    print("Blue is calm and Nice good choice!")
+else:
+    print(f"{favorite_color.capitalize()} is a unique pick!")
