@@ -1,0 +1,24 @@
+# Name Gage Stengl
+# Period 6
+# Assignment File i/o HW
+# Time Spent: 10 minutes
+
+file = open("teams.txt", "w") # opens the file so we can write the teams in it
+
+file.write("FaZe Clan\n") # I write 3 esports teams into the file
+file.write("G2 esports\n")
+file.write("Furia Esports\n")
+
+file.close() # closes the file after writing
+
+file = open("teams.txt", "r") # opens the file to read it
+
+team1 = file.readline() # reads the lines of the 3 teams
+team2 = file.readline()
+team3 = file.readline()
+
+file.close() # closes the file again
+
+print(team1) # prints the esports teams out
+print(team2)
+print(team3)
