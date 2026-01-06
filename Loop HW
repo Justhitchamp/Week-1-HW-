@@ -1,0 +1,9 @@
+# Name Gage Stengl
+# Period Period 6
+# Assignment Loop homework  
+# Time Spent: 10 minutes
+# Asks user how many times he wants to put R6 in 
+times = int(input("How many times u want me to say R6")) 
+# Uses i and range for the loop to repeat
+for i in range(times):
+    print("R6", i + 1)
