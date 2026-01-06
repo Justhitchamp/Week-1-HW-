@@ -1,0 +1,65 @@
+import random # Randomizes are picks so we don't get the same ever time.
+
+# all the NBA teams and their all-time top 5 players
+nba_teams = {
+    "Atlanta Hawks": ["Dominique Wilkins", "Bob Pettit", "Joe Johnson", "Lou Hudson", "Pistol Pete Maravich"],
+    "Boston Celtics": ["Bill Russell", "John Havlicek", "Paul Pierce", "Larry Bird", "Bob Cousy"],
+    "Brooklyn Nets": ["Jason Kidd", "Julius Erving", "Brook Lopez", "Kevin Durant", "Kenny Anderson"],
+    "Charlotte Hornets": ["Kemba Walker", "Muggsy Bogues", "Larry Johnson", "Alonzo Mourning", "Dell Curry"],
+    "Chicago Bulls": ["Michael Jordan", "Scottie Pippen", "Derrick Rose", "Dennis Rodman", "Bob Love"],
+    "Cleveland Cavaliers": ["LeBron James", "Kyrie Irving", "Mark Price", "Zydrunas Ilgauskas", "Larry Nance"],
+    "Dallas Mavericks": ["Dirk Nowitzki", "Steve Nash", "Jason Kidd", "Mark Aguirre", "Michael Finley"],
+    "Denver Nuggets": ["Carmelo Anthony", "Alex English", "Dan Issel", "Chauncey Billups", "Antonio McDyess"],
+    "Detroit Pistons": ["Isiah Thomas", "Joe Dumars", "Bill Laimbeer", "Dennis Rodman", "Chauncey Billups"],
+    "Golden State Warriors": ["Stephen Curry", "Klay Thompson", "Kevin Durant", "Draymond Green", "Wilt Chamberlain"],
+    "Houston Rockets": ["Hakeem Olajuwon", "Yao Ming", "Tracy McGrady", "James Harden", "Clyde Drexler"],
+    "Indiana Pacers": ["Reggie Miller", "Paul George", "Mel Daniels", "Jermaine O'Neal", "Chris Mullin"],
+    "LA Clippers": ["Chris Paul", "Blake Griffin", "DeAndre Jordan", "Lamar Odom", "Danny Manning"],
+    "Los Angeles Lakers": ["Magic Johnson", "Kobe Bryant", "LeBron James", "Shaquille O'Neal", "Jerry West"],
+    "Memphis Grizzlies": ["Marc Gasol", "Mike Conley", "Zach Randolph", "Pau Gasol", "Shareef Abdur-Rahim"],
+    "Miami Heat": ["Dwyane Wade", "LeBron James", "Alonzo Mourning", "Chris Bosh", "Shaquille O'Neal"],
+    "Milwaukee Bucks": ["Kareem Abdul-Jabbar", "Giannis Antetokounmpo", "Sidney Moncrief", "Ray Allen", "Bob Lanier"],
+    "Minnesota Timberwolves": ["Kevin Garnett", "Kevin Love", "Sam Cassell", "Wally Szczerbiak", "Tom Gugliotta"],
+    "New Orleans Pelicans": ["Anthony Davis", "Chris Paul", "David West", "Tyreke Evans", "Jrue Holiday"],
+    "New York Knicks": ["Patrick Ewing", "Walt Frazier", "Allan Houston", "Willis Reed", "Bernard King"],
+    "Oklahoma City Thunder": ["Kevin Durant", "Russell Westbrook", "James Harden", "Gary Payton", "Shawn Kemp"],
+    "Orlando Magic": ["Shaquille O'Neal", "Penny Hardaway", "Dwight Howard", "Tracy McGrady", "Nick Anderson"],
+    "Philadelphia 76ers": ["Allen Iverson", "Julius Erving", "Wilt Chamberlain", "Charles Barkley", "Maurice Cheeks"],
+    "Phoenix Suns": ["Steve Nash", "Charles Barkley", "Kevin Johnson", "Amar’e Stoudemire", "Tom Chambers"],
+    "Portland Trail Blazers": ["Clyde Drexler", "Damian Lillard", "Terry Porter", "LaMarcus Aldridge", "Bill Walton"],
+    "Sacramento Kings": ["Chris Webber", "Peja Stojakovic", "Mitch Richmond", "Vlade Divac", "Oscar Robertson"],
+    "San Antonio Spurs": ["Tim Duncan", "Manu Ginobili", "Tony Parker", "David Robinson", "George Gervin"],
+    "Toronto Raptors": ["Vince Carter", "Kyle Lowry", "DeMar DeRozan", "Chris Bosh", "Fred VanVleet"],
+    "Utah Jazz": ["Karl Malone", "John Stockton", "Deron Williams", "Pete Maravich", "Jeff Hornacek"],
+    "Washington Wizards": ["Wes Unseld", "Elvin Hayes", "Gilbert Arenas", "John Wall", "Bradley Beal"]}
+
+# this function makes a list of teams and picks one randomly
+def pick_random_team():
+    teams = []
+    for team in nba_teams:      # uses a for loop to get a nba team
+        teams.append(team)
+    return random.choice(teams)   # picks and returns one random team from the list
+
+# uses a function that gets a player from the user number
+def pick_player(team, number):
+    count = 1
+    for player in nba_teams[team]:  # uses for loop to get the players from the selected team
+        if count == number:
+            return player
+        count += 1
+
+# asks the user to pick a number from 1-30
+team_number = int(input("Pick a number from 1 to 30: ")) 
+# makes sure the number is 1-30
+if team_number < 1 or team_number > 30:
+    print(" it has to be 1-30...")
+else:
+    team = pick_random_team() # gets a random team
+    print("Your random NBA team is:", team)
+    # makes the program keep asking till the user puts in a number from 1-5
+    player_number = 0
+    while player_number < 1 or player_number > 5:   # uses a while loop
+        player_number = int(input("Pick a number from 1 to 5: "))  # user picks a number 1-5 to get a player from that team's starting 5
+
+    player = pick_player(team, player_number)
+    print("You got this all-time player from", team + ":", player) # tells the user what nba team and player they got
