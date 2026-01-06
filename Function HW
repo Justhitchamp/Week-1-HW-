@@ -1,0 +1,29 @@
+# Name Gage Stengl
+# Period 6
+# Assignment Function/Control keyword HW 
+# Time Spent: 25 minutes 
+
+def say_welcome(): # this function Welcomes u to my program 
+    print("Welcome to gage HW program")
+
+
+def pick_operator(): # this function Picked a operator from R6 that i choose
+    op = "Doc the goat"  # I used doc for this cause he the goat
+    print("Your operator is:", op) #prints out the Operator that i picked
+
+# this function Has a loop and uses a break to stop the loop
+def round_loop():
+    for rou in range(1, 11):# Starts the loop from 1 to 10
+        print("Round:", rou)
+        if rou == 5:
+            print("Stops at Round 5") # Stops at round 5 because of the keyword Break
+            break
+
+
+def main(): # the main function that calls everything
+    say_welcome() # The welcome function that is called by the main 
+    pick_operator() # The r6 operator function that is called by the main
+    round_loop() # The Round loop function that got called by the main
+
+# This is how the program actually starts using Main
+main()
