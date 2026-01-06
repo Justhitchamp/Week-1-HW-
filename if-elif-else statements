@@ -1,0 +1,21 @@
+# Name: Gage 
+#Period 6
+#Assignment if-elif-else statements 
+# Time spent: 20 minutes
+
+
+print("Guessing Game")
+
+secret = 16 # The number we need to guess to win
+
+guess = 0 # To make the guess start at 0 
+
+
+guess = int(input("enter your guess: ")) #Makes player put guess in
+
+if guess == secret: # Means u have won
+    print("you got it")
+elif guess < secret: # Means ur guess was to low
+    print("Higher")
+else:   # Makes it where if u guessed to high it prints out to guess lower
+    print("Lower")
