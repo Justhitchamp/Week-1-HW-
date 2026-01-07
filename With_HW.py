@@ -1,6 +1,10 @@
 step_counter = int(input('How many steps do u want to add '))
-file_variable = open('example_file.txt','w')
-for num in range(1, num_lines + 1):
-entry = input('#{num} What would you like to add to the file? ')
-file_variable.write(f'{entry}\n')
-file_variable.close
+file_variable = open('step_counter.txt','w')
+for num in range(1, user_days + 1):
+steps = input ("The amount of days u have walked")
+step_counter.write(f'{entry}\n')
+step_counter.close
+file_object = open('example.txt','r')
+for line in file_object:
+print(line)
+file_object.close
